@@ -1,0 +1,121 @@
+<!-- 
+
+random things to reuse from other projects
+
+
+   <nav>
+                    <ul>
+                        <li><button onclick="inspire()">The Inspiration</button></li>
+                        <li><button onclick="about()">About The Game</button></li>
+                        <li><button onclick="showCrys()">About The Developer</button></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="hidden-texts-container">
+                <section class="inspiration hidden-texts" hidden>
+                    <h3>The Inspiration</h3>
+                    <p> Donut Maker, a game for anyone who has a strong love of delicious donuts but who are
+                        <i>unfortunately</i>
+                        plagued by the <i>very <b>real</i></b> and <b><i>very dangerous</i></b> allergy to exercise, was
+                        inspired by the original Cookie Clicker Game. <br><br>
+                        Just like Cookie Clicker, click away and enjoy yourself! The more donuts you make the more perks
+                        you get! MUCH better
+                        than real life.
+                    </p>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="about-game hidden-texts" hidden>
+                    <h3>About Donut Clicker</h3>
+                    <p>
+                        You can earn auto clickers and multipliers which will battle right along side
+                        you to collect as many delicious donuts as you could only <i>dream</i> of.<br>
+                        <x-sign class="fear">But Fear Not!!</x-sign>
+                        If someone should come along, like a personal trainer for example, all you need
+                        do is click the ever handy reset button which will erase your donut binge without judgement.
+                        Leave all guilt and hesitation at the door of Crys' Donut Shop, dive in and most importantly,
+                        <strong>ENJOY YOURSELF!</strong>
+                    </p>
+                </section>
+
+                <section class="about-Crys hidden-texts" hidden>
+                    <h3>About The Developer</h3>
+                    <p>
+                        My name is Crys David. I'm a software developer who enjoys learning many different programming
+                        languages and I feel like there will always be room for improvement.
+                    </p>
+                    <div class="a-container">
+                        <p>
+                            <a href="https://CrysD5.github.io/" target="_blank">My Portfolio</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/CrysD5" target="_blank">Github</a>
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <button class="make-donut side-nav__item">
+                            Click to Bake Donuts!
+                        </button>
+                        <button class="ac-btn side-nav__item" id="yayBtn" disabled>
+                            Buy AutoClickers!
+                        </button>
+                        <button class="m-btn side-nav__item" disabled>
+                            Lets Multiply!
+                        </button>
+                    </ul>
+                </nav>
+
+
+const aboutGame = document.querySelector(".about-game")
+const aboutCrys = document.querySelector(".about-Crys")
+const inspiration = document.querySelector(".inspiration")
+
+const about = () => {
+    if  (aboutGame.style.display === "block") {
+     aboutGame.style.display = "none"
+    } else {
+     aboutGame.style.display = "block"
+    }
+}
+
+const showCrys = () => {
+    if (aboutCrys.style.display === "block") {
+        aboutCrys.style.display = "none"
+    } else {
+        aboutCrys.style.display = "block"
+    }
+}
+
+const inspire = () => {
+    if (inspiration.style.display === "block") {
+        inspiration.style.display = "none"
+    } else {
+        inspiration.style.display = "block"
+    }
+}
+
+const clearScreen = resetBtn => {
+    resetBtn.addEventListener("click", () => {
+        location.reload()
+    })
+}
+
+
+
+
+
+
+
+
+-->
