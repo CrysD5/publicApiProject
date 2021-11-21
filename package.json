@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "jest": "^27.3.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "random-apod": "^1.0.1"
+  }
+}

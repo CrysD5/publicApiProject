@@ -2,7 +2,7 @@ function nasaRequest(){
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
     const apiKey = "dPt6lCz5HFhwvlQwlB6eQWz2hUJBCJiFCk23jgrO";
     const dateInput = document.querySelector("#datepicker");
-    const title = document.querySelector("#title");
+    const title = document.querySelector("#title"); 
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
@@ -13,11 +13,11 @@ function nasaRequest(){
     const imageSection =`<a id="hdimg" href="" target="-blank">
         <div class="image-div">
         <img id="image_of_the_day" src="" alt="image-by-nasa">
-        </div>
-        
-    </a>`
+        </div></a>
+        <p id="hd"> Click the Image to veiw HD version.</p>
+        `
     
-    const videoSection=`<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
+    const videoSection=`<div class="video-div"> <iframe id="videoLink"></iframe></div>`
     
     let newDate = "&date="+dateInput.value+"&";
     
@@ -49,7 +49,7 @@ function nasaRequest(){
         dateInput.max=currentDate;
         dateInput.min="1995-06-16";
         
-            if(data.media_type=="video"){
+            if(data.media_type==="video"){
                 mediaSection.innerHTML=videoSection;
                 document.getElementById("videoLink").src=data.url;
                
@@ -60,6 +60,7 @@ function nasaRequest(){
             }
         information.innerHTML=data.explanation
     }
+
     fetchData();
     }
     
@@ -68,7 +69,3 @@ function nasaRequest(){
         e.preventDefault();
         nasaRequest();
     })
-    
-    
-    
-    

@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasa's picture of the day</title>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/theme.css">
+    <style>
+        #copyright {
+            display: block;
+        }
+    </style>
 </head>
 <body onload="nasaRequest()">
     <main>
@@ -13,17 +18,18 @@
         <h1>Nasa's Astronomical Picture of the Day</h1>
         
         <form >
-          <label for="datepiceker">Pick a date:
+          <label class="datepicker">Pick a date:
             <input id="datepicker" type="date" min="" max="" > 
           </label>
         </form>
-        <hr style="color: white; width: 60vw;">
+        <hr>
       </header>
    
       <section class="title-section">
         <h2 id="title"></h2>
         <p id="date"></p>
         <small style="display: block;" id="copyright" ></small>
+        <hr>       
       </section>
      
      <section id="media-section">
@@ -34,15 +40,24 @@
     <div class="description-div">
       <p id="description"></p>
     </div>
-    
+
+    <div>
+<!-- will add random button here once I get the code sorted out. For now I will use it to send user to APOD information -->
+      <p>
+        To view more information about NASA APIs you can go <a href="https://api.nasa.gov/" target="_blank">here</a> and browse all of the APIs available for public use through NASA.
+
+      </p>
+    </div>
+
+      
     <footer class="footer">
         
       
   </footer>
     
-    </main>
-    
+    </main>    
   
-  <script src="/src/js/app.js"></script>  
+    <script src="/src/js/app.js"></script>  
+  
 </body>
 </html>
